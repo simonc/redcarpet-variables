@@ -18,6 +18,20 @@ Or install it yourself as:
 
     $ gem install redcarpet-variables
 
+## Dependencies
+
+* Redcarpet (obviously)
+
+If you use the `Api` data source, you'll need an HTTP client. By default you can
+just install HTTParty:
+
+``` ruby
+gem 'httparty'
+```
+
+You can use any other HTTP client, check the wiki to learn more:
+[Changing the HTTP client](https://github.com/simonc/redcarpet-variables/wiki/changing-the-http-client)
+
 ## Usage
 
 ### Variables
