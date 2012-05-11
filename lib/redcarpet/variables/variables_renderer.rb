@@ -8,9 +8,11 @@ module Redcarpet::Variables
     end
 
     def preprocess(full_document)
-      full_document.gsub(/\$\{(.*?)\}/) do
+      full_document.gsub!(/\$\{(.*?)\}/) do
         @data_source.fetch $1
       end
+      @data_source.clear
+      full_document
     end
   end
 end

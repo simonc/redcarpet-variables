@@ -9,5 +9,8 @@ module Redcarpet::Variables::DataSource
     def fetch(key)
       raise "The data source doesn't implement the fetch method"
     end
+
+    def clear
+    end
   end
 end
