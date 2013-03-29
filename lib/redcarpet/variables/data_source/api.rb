@@ -25,6 +25,8 @@ module Redcarpet::Variables::DataSource
 
     def url_for(key)
       raise "The URL option is not set in options[:url]" unless options[:url]
+      raise "Variable key is empty" if key.nil? || key.empty?
+
       options[:url] % { key: key }
     end
 
